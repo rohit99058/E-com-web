@@ -1,0 +1,160 @@
+.product-details {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+.product-details:hover {
+  box-shadow: 0 6px 28px rgba(0,0,0,0.15);
+}
+
+.product-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.main-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.product-main-image {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-main-image:hover {
+  transform: scale(1.05);
+}
+
+.product-meta {
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.description {
+  text-align: center;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.pricing {
+  text-align: center;
+  background: #f9fafc;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.price {
+  color: #2a7ae2;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.discount {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.rating {
+  color: #ffb400;
+}
+
+.section {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.section h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.review-card {
+  background: #f8f9fb;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+}
+
+.review-comment {
+  color: #555;
+  font-style: italic;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.gallery-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-image:hover {
+  transform: scale(1.07);
+}
+
+
+
+
+.back-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #007bff, #00b4d8);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 20px 0 0 50px; /* pushes it slightly right and down */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.back-btn:hover {
+  background: linear-gradient(135deg, #00b4d8, #0096c7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 150, 255, 0.3);
+}
+
+.back-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+.back-btn:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
