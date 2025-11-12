@@ -22,7 +22,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-purple-100 to-blue-100 dark:from-gray-800 dark:to-gray-900 px-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-purple-100 to-blue-100 dark:from-gray-800 dark:to-gray-900 px-4 p-12">
       <div className="w-full max-w-md bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-8">
         <h2 className="text-3xl font-bold text-center text-blue-600 dark:text-white mb-6">
           Login
