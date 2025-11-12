@@ -6,7 +6,7 @@ function UserProvider(props) {
 
     let [name,  setName] = useState(null)
     
-  return <UserContext.Provider value={{name}}>{props.children}</UserContext.Provider>;
+  return <UserContext.Provider value={{name, setName}}>{props.children}</UserContext.Provider>;
 }
 
 export default UserProvider

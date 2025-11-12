@@ -6,7 +6,7 @@ const Cart = () => {
   const { cart, removeFromCart } = useContext(CartContext);
 
   return (
-    <div className="flex flex-wrap justify-start items-start gap-6 p-8 min-h-screen bg-gray-100">
+    <div className="flex flex-wrap justify-start items-start gap-6 p-12 min-h-screen bg-gray-100">
       {cart.length === 0 ? (
         <h2 className="w-full text-center text-2xl text-gray-500 mt-24">
           Your cart is empty 🛒

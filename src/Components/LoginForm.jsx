@@ -1,14 +1,11 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { UserContext } from "../ContextApi/UserContext";
 
 const LoginForm = () => {
-  let { name, setName } = useContext(UserContext);
-  let uname = useRef();
-
-  const notify = () => toast("Logged In Successfully!");
+  let { setName } = useContext(UserContext);
 
   const {
     register,
@@ -19,7 +16,8 @@ const LoginForm = () => {
 
   const onSubmit = (data) => {
     console.log("Login Data:", data);
-    setName(uname.current.value);
+    setName(data.email);
+    toast("Logged In Successfully!");
     reset();
   };
 
@@ -30,17 +28,17 @@ const LoginForm = () => {
           Login
         </h2>
 
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col gap-4"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           {/* Email */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300 mb-1">
+            <label
+              htmlFor="email"
+              className="block text-gray-700 dark:text-gray-300 mb-1"
+            >
               Email
             </label>
             <input
-              ref={uname}
+              id="email"
               type="email"
               placeholder="Enter your email"
               {...register("email", {
@@ -59,10 +57,14 @@ const LoginForm = () => {
 
           {/* Password */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300 mb-1">
+            <label
+              htmlFor="password"
+              className="block text-gray-700 dark:text-gray-300 mb-1"
+            >
               Password
             </label>
             <input
+              id="password"
               type="password"
               placeholder="Enter your password"
               {...register("password", { required: "Password is required" })}
@@ -77,7 +79,6 @@ const LoginForm = () => {
 
           {/* Submit Button */}
           <button
-            onClick={notify}
             type="submit"
             className="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition-all duration-300"
           >
