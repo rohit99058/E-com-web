@@ -1,29 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Home.css'
 
 const Home = () => {
   return (
-    <div style={{display : "flex", flexDirection : "column", justifyContent : "center", alignItems : "center"}}>
-      <h1 style={{ textAlign: "center" }}>
-        Let's Shopping with <span style={{ color: "red", textDecoration : "underline" }}>ShopEase</span>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-50 to-gray-200 text-center px-4">
+      <h1 className="text-3xl sm:text-5xl font-bold mb-4">
+        Let’s go Shopping with{" "}
+        <span className="text-red-500 underline decoration-2">ShopEase</span>
       </h1>
-      <span
-        style={{
-          border: "2px solid black",
-          borderRadius: "10px",
-          height: "30px",
-          width : "180px",
-          textAlign : "center",
-          marginBottom : "10px"
-        }}
+
+      <Link
+        to="/product"
+        className="border-2 border-black rounded-lg px-6 py-2 mb-6 hover:bg-black hover:text-white transition duration-300 ease-in-out"
       >
-        <Link to="/product">Explore</Link>
-      </span>
+        Explore
+      </Link>
+
       <img
-        style={{ height: "100%", width: "100%", backgroundSize : "cover" }}
+        className="w-full max-w-4xl rounded-2xl shadow-lg object-cover"
         src="https://cdn.pixabay.com/photo/2020/03/27/17/03/shopping-4974313_1280.jpg"
-        alt=""
+        alt="Shopping"
       />
     </div>
   );
